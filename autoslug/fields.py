@@ -169,6 +169,10 @@ class AutoSlugField(SlugField):
                  'use unique_with=("foo",) instead.', DeprecationWarning)
             self.unique_with += (kwargs['unique_with_date'],)
 
+        if kwargs.get('overwrite_on_save'):
+            print ("Autoslug used to have a feature called overwrite_on_save. References to this still exists in some older migrations. To get around this discrepancy we're stripping off overwrite_on_save as a kind of workaround. This is a message to say that we just did this. You should be able to safely ignore this message.")
+            del kwargs['overwrite_on_save']
+
         if self.unique_with:
             # we will do "manual" granular check below
             kwargs['unique'] = False

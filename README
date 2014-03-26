@@ -1,5 +1,13 @@
-django-autoslug
-===============
+django-autoslug-1.4.1
+=====================
+
+This Fork
+---------
+
+This fork will continue to be version 1.4.1 of django-autoslug to provide
+legacy support to some projects. Changes may be made to fix bugs found and
+to have specific projects work correctly with it.
+
 
 Django-autoslug is a reusable Django application that provides an improved
 slug field which can automatically:
